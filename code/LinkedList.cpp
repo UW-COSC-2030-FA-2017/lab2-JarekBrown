@@ -1,6 +1,6 @@
 // LinkedList.cpp
 
-// tom bailey   0745  5 oct 2010
+// Jarek Brown
 // Definition of methods for the List class.
 
 #include "LinkedList.h"
@@ -104,6 +104,54 @@ Node * List::clone(Node * ptr)
 		ptr = ptr->next_;
 	}
 	return first;
+}
+
+int List::size()
+{
+	int size = 0;
+	if(!empty())
+	{
+		Node * ptr = first_;
+		while(ptr != NULL)
+		{
+			size++;
+			ptr = ptr->next_;
+		}
+	}
+	return size;
+}
+
+double List::sum()
+{
+	double sum = 0;
+	if(!empty())
+	{
+		Node * ptr = first_;
+		while(ptr != NULL)
+		{
+			sum += ptr->entry_;
+			ptr = ptr->next_;
+		}
+	}
+	return sum;
+}
+
+void List::insertAsLast(double x)
+{
+	if(!empty())
+	{
+		Node * ptr = first_;
+		while(ptr != NULL)
+		{
+			if(ptr->next_ == NULL) 
+				{
+					ptr->next_ = new Node(x);
+					break;
+				}
+			else{ptr = ptr->next_;}
+		}
+	}
+	else{insertAsFirst(x);}
 }
 
 

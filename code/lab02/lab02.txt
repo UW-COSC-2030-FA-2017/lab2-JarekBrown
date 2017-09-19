@@ -1,0 +1,1 @@
+./Debug/up_LinkedList.cpp.o ./Debug/up_ListProcessor.cpp.o ./Debug/up_Node.cpp.o

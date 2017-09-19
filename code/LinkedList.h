@@ -1,6 +1,6 @@
 // LinkedList.h
 
-// tom bailey   0740  5 oct 2010
+// Jarek Brown
 // Declaration of the List class.
 
 // A List stores and manages a sequence of doubles.
@@ -65,6 +65,12 @@ public:
 	// post: the first double in this List has been removed
 	//         from this List and has been returned.
 	double removeFirst();
+	
+	int size(); //returns size of list
+	
+	double sum(); //returns the sum of all the doubles in list
+	
+	void insertAsLast(double x); //inserts a double at end of list
 
 private:
 	//*** Inaccessible standard functions ***

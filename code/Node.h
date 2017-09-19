@@ -1,6 +1,6 @@
 // Node.h
 
-// tom bailey   0755  05 oct 2010
+// Jarek Brown
 // Declare the Node class.
 
 // Node uses public access to simplify code in the
